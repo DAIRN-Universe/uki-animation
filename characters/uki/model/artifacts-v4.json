@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "version": "v4-avian",
+  "status": "local_only_awaiting_drive_permission",
+  "root": ".local-assets",
+  "supersedes": "artifacts-v3.json",
+  "source_sha256": {
+    "pipeline/blender/build_uki.py": "86128431855f3f7dd5644e1ade989474a79ff9e82e2f775afe03b9176a70e1ba",
+    "pipeline/blender/avian_body.py": "b76ce597d1a128d9a0ea2f943f087fc4e7cd467854569dd276cc0456868e15c2",
+    "pipeline/blender/uki_character.json": "3fff6bea4cda6671fe9e0ff9b9c83363ba48bd0eb0b1151402406b6c31bb7505",
+    "pipeline/blender/verify_uki.py": "cdcad2ea0d30c707b2c7de7435cbe7cbad057b1ef287adee5e477289290e3f58",
+    "pipeline/blender/verify_wing_preservation.py": "9418a85d711824ab077e8226b0a99bf903ff125eb3381055a39666f2de7abc64",
+    "pipeline/blender/render_motion.py": "a60fad2ee2a0a06ddb105c92c9c8f2d593c50026705a5922e956d691c218ab25",
+    "pipeline/blender/make_view_comparison.py": "214d0ff12d8345659d3270df616ad92e6d709827fac18d2e4877b7f4e852064c"
+  },
+  "artifacts": [
+    {
+      "path": "characters/uki/model/v4-avian-final/audit.json",
+      "sha256": "5298cb885821a3dd006f3761868a3b4de0e6fef36c12b7cf5fc73eb9957cd2a7",
+      "size_bytes": 2754
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/back.png",
+      "sha256": "102bfe551e05c2b2410a86408d31926420013a85d83b477293bb4c5feb231cd3",
+      "size_bytes": 417099
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/four_view_comparison.json",
+      "sha256": "a6a2fa06c1d5e02d5aacf5a5cdd0fc327e4e0795d8e1c5766c93d4560170ae29",
+      "size_bytes": 1908
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/four_view_comparison.png",
+      "sha256": "66bdc0a238fba00c543ec737ce21d65b95944e9a3adee56ec8a5a7fc8816e471",
+      "size_bytes": 2138383
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/front.png",
+      "sha256": "c2b0e8d2f01dbda3e4250771b61a647a26bd3783490056e7b6ec78d6c0c76d76",
+      "size_bytes": 397546
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/motion.mp4",
+      "sha256": "95c0384539b7eecdaf4cc8e36594880d180d6664b53f6548eaf948f86a07b8c8",
+      "size_bytes": 306131
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_01.png",
+      "sha256": "8311fb9e2f97b2a9469ed4fb4532d87c3c68cf75efba15ab9541483a6a0ebb39",
+      "size_bytes": 501146
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_02.png",
+      "sha256": "e39e5640af026e6c3431e797aa9573db701c913d758af5dd3f397d6a28d7d48f",
+      "size_bytes": 500301
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_03.png",
+      "sha256": "a5c63f321c84a350ad364c7a1d22ddc9211ac47f5ac160419d3c8dba19ee8e23",
+      "size_bytes": 503568
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_04.png",
+      "sha256": "410b6a0a2eec996957d996ec077bf08551963f9177014992982f14fc972e23c0",
+      "size_bytes": 500400
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_05.png",
+      "sha256": "649af1064a66506a9a06cba4f9529310e531ce471764aa4304e07c99e20fb0ed",
+      "size_bytes": 497620
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_06.png",
+      "sha256": "ef35d3e345f1253107ca59aa04bcbd94b7689bc39128af498c1d43a5d9fd7f0c",
+      "size_bytes": 499712
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_07.png",
+      "sha256": "7691c5b4b3a22e0cba1bc16e6338a0d6368d1fa18df81b940c2aff6d6a159bf9",
+      "size_bytes": 497798
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_08.png",
+      "sha256": "125a6b5fe1f098d33255887b013a96a8e8fd2c57e788cea7160dc31095e55f61",
+      "size_bytes": 505057
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_09.png",
+      "sha256": "49323845d11745ec899dd6c7cab65f21417c4764d3df6ca0244cd2ef9c6e1952",
+      "size_bytes": 500088
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_10.png",
+      "sha256": "a0941f82fb28f91a5ad3d750fd35547058115b7b12019d7601c66acfa39ad1f3",
+      "size_bytes": 500032
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_11.png",
+      "sha256": "d4f023753963b3ee983a3121cc64f8298dc06c0894bf7c605834abe2275643da",
+      "size_bytes": 497413
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_12.png",
+      "sha256": "e8e74e8fd46e501326ebf2fe5da6a8d72c1ddac6f1b071e5c244e3c92630f64e",
+      "size_bytes": 493798
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_13.png",
+      "sha256": "504053ef1cea1599a744b9d4236bfa3a26786a04651bdfaf612d3996f9355115",
+      "size_bytes": 504751
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_14.png",
+      "sha256": "77a85c3505db04ce9b2bb9e7e37352569497ca7923d73823024ebb11a362e269",
+      "size_bytes": 503508
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_15.png",
+      "sha256": "0ec30713f9a0a3ef6377092bca8582e242bc5f38d5114c04a4797defd6e4a01d",
+      "size_bytes": 502846
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/phase_16.png",
+      "sha256": "684103bd4c693109f4b8ae7f7b171888db32cc36dbf8c48f6b7fd9e131606327",
+      "size_bytes": 502365
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/profile.png",
+      "sha256": "11808080efff0817261078938d0e41e4f2ee55ee8de9b1ea1e2740ab8bb0d85b",
+      "size_bytes": 332922
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/profile_head_front.png",
+      "sha256": "151dbf22fc02575be12a060294e54f485860d1a624806a64a0148ac9d66ed5c0",
+      "size_bytes": 356871
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/three_quarter.png",
+      "sha256": "99a02971b514c2b46988992cfe1c5335790d4b8e7c78e1c7f2bc0fac6c4e346c",
+      "size_bytes": 364827
+    },
+    {
+      "path": "characters/uki/model/v4-avian-final/uki_character_v4.blend",
+      "sha256": "2ce1347ea231710a8c2ae334623b901859c565c9886ce3cf59aa9d1ac61e9051",
+      "size_bytes": 6447820
+    }
+  ],
+  "video_probe": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 480,
+        "avg_frame_rate": "8/1",
+        "nb_frames": "61"
+      }
+    ],
+    "format": {
+      "duration": "7.625000"
+    }
+  },
+  "note": "Local build receipt, not the Asset Sync manifest. No result Drive IDs exist yet."
+}

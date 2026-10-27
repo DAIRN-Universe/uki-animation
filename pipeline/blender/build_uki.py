@@ -181,70 +181,12 @@ def skeleton():
 
 
 def bird(rig):
-    oval('Body', (0, 0, 1.08), (.53, .43, .67), 'brown', 'body')
-    oval('Breast', (0, -.25, 1.12), (.37, .18, .55), 'cream', 'body')
-    oval('Head', (0, 0, 2.16), (.70, .49, .62), 'brown', 'head')
-    # Overlapping, closed feather islands around the brown head/back.
-    for row in range(5):
-        z = 2.56-row*.19
-        latitude = (z-2.16)/.65
-        radius = math.sqrt(max(.15, 1-latitude**2))
-        for j in range(18):
-            angle = (j+row*.5)*math.tau/18
-            x, y = .66*radius*math.cos(angle), .42*radius*math.sin(angle)
-            if y < -.16:
-                continue
-            feather('Head plumage', (x, y, z+.06), (x*1.08, y*1.09, z-.23), .10, .04,
-                    ['brown', 'copper', 'tan'][(j+row)%3], 'head')
-    for row in range(4):
-        for j in range(11):
-            angle = j*math.pi/10
-            x, y = .48*math.cos(angle), .34*math.sin(angle)
-            z = 1.47-row*.23
-            feather('Back plumage', (x, y, z), (x*.94, y*1.1, z-.32), .11, .04,
-                    ['copper', 'brown', 'tan'][(row+j)%3], 'body')
-    for j in range(5):
-        x = (j-2)*.09
-        feather('Tail', (x, .25, .9), (x*1.3, .53, .27), .105, .045, 'copper', 'body')
-    for row in range(4):
-        for j in range(5):
-            x = (j-2)*.115
-            z = 1.47-row*.2
-            feather('Breast feather', (x, -.37, z), (x*.95, -.41, z-.25), .085, .025,
-                    'cream' if (j+row)%2 else 'ivory', 'body')
-    feather('Forehead mask', (0, -.38, 2.73), (0, -.50, 2.10), .14, .085, 'ivory', 'head')
-    feather('Chin mask', (0, -.38, 2.06), (0, -.35, 1.66), .23, .10, 'ivory', 'head')
-    for sign in (-1, 1):
-        x = sign*.31
-        oval('Face disk', (x, -.36, 2.15), (.345, .16, .40), 'ivory', 'head')
-        for j in range(7):
-            a = j*math.pi/6
-            feather('Face fringe', (x+sign*.18*math.sin(a), -.40, 2.44-.48*j/6),
-                    (x+sign*(.28+.02*math.sin(a)), -.40, 2.40-.53*j/6), .065, .026, 'cream', 'head')
-        oval('Eye outline', (x, -.509, 2.21), (.235, .06, .264), 'navy', 'head')
-        oval('Iris gold', (x, -.557, 2.21), (.204, .044, .23), 'gold', 'head')
-        oval('Iris blue', (x, -.594, 2.23), (.159, .027, .187), 'blue', 'head')
-        oval('Pupil', (x, -.615, 2.25), (.113, .022, .15), 'navy', 'head')
-        oval('Eye glint', (x-.045, -.638, 2.32), (.041, .012, .045), 'white', 'head')
-        oval('Eye small glint', (x+.038, -.638, 2.23), (.017, .009, .019), 'white', 'head')
-        feather('Brow blue', (sign*.10, -.49, 2.48), (sign*.51, -.47, 2.47), .055, .027, 'navy', 'head')
-        for j in range(3):
-            feather('Blue ear tuft', (sign*(.41+j*.05), -.03, 2.57),
-                    (sign*(.43+j*.11), -.015, 3.08-j*.08), .12, .065,
-                    ['blue', 'teal', 'navy'][j], 'head')
-        points = [(sign*(.48+.07*math.sin(t*3.5)), -.105, 2.65+t*.37) for t in [i/20 for i in range(21)]]
-        line('Ear gold inlay', points, .021, 'gold', 'head')
-        # Three forward toes and one rear toe per foot; no wing claws.
+    sys.path.insert(0,str(Path(__file__).resolve().parent))
+    from avian_body import build_avian_body
+    build_avian_body(sys.modules[__name__],rig)
+    # Wing construction, coordinates, weights and materials are retained from v3.
+    for sign in (-1,1):
         side = 'R' if sign == 1 else 'L'
-        bone = 'foot.'+side
-        oval('Ankle', (sign*.26, 0, .32), (.10, .10, .17), 'gold', bone)
-        oval('Foot', (sign*.26, -.09, .17), (.17, .17, .075), 'gold', bone)
-        for j in range(3):
-            tx = sign*.26+(j-1)*.12
-            line('Forward toe', [(sign*.26, -.08, .18), (tx, -.26, .12), (tx, -.35, .10)], .042, 'gold', bone)
-            feather('Toe claw', (tx, -.33, .12), (tx, -.43, .045), .045, .035, 'claw', bone)
-        line('Rear toe', [(sign*.26, .02, .17), (sign*.26, .20, .10)], .037, 'gold', bone)
-        feather('Rear claw', (sign*.26, .18, .12), (sign*.26, .29, .06), .035, .028, 'claw', bone)
         # Shoulder and forearm volumes plus three independent feather groups.
         feather('Wing upper', (sign*.47, -.015, 1.67), (sign*.79, -.08, 1.06), .20, .14, 'blue', 'upper.'+side)
         feather('Wing forearm', (sign*.78, -.06, 1.16), (sign*.72, -.13, .49), .17, .105, 'teal', 'forearm.'+side)
@@ -274,7 +216,6 @@ def bird(rig):
                     ['teal', 'blue'][j%2], 'upper.'+side)
         points = [(sign*(.54+.09*math.sin(t*5.5)), -.195, 1.51-t*.38) for t in [i/30 for i in range(31)]]
         line('Wing gold inlay', points, .026, 'gold', 'upper.'+side)
-    feather('Beak', (0, -.51, 2.09), (0, -.70, 1.87), .115, .095, 'gold', 'head')
     bpy.ops.object.select_all(action='DESELECT')
     for obj in PARTS:
         obj.select_set(True)
@@ -538,7 +479,7 @@ def main():
     args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
     if CFG.get('book_rotation_locked') and len({(p['yaw'],p['tilt'],p['reading_pitch']) for p in CFG['phases']}) != 1:
         raise RuntimeError('Book orientation must remain constant; use wing motion to open the cover')
-    ARTICULATED = args.articulated_fingers
+    ARTICULATED = args.articulated_fingers or bool(CFG.get('preserve_wings_from'))
     out = args.output.resolve()
     blend_name = 'uki_character_' + CFG['version'].split('-')[0] + '.blend'
     if out.exists():
@@ -622,8 +563,8 @@ def main():
                 if ARTICULATED:
                     for suffix in ('_tip',):
                         rig.pose.bones[f'feathers{k+1}{suffix}.{side}'].rotation_euler = (0,0,0)
-        for name, loc in [('front',(0,-7,1.56)), ('three_quarter',(5,-5,1.56)), ('profile',(7,0,1.56)), ('back',(0,7,1.56)), ('profile_head_front',(7,0,1.56))]:
-            rig.pose.bones['head'].rotation_euler.y = math.pi/2 if name == 'profile_head_front' else 0
+        for name, loc in [('front',(0,-7,1.56)), ('three_quarter',(-5,-5,1.56)), ('profile',(-7,0,1.56)), ('back',(0,7,1.56)), ('profile_head_front',(-7,0,1.56))]:
+            rig.pose.bones['head'].rotation_euler.y = -math.pi/2 if name == 'profile_head_front' else 0
             camera.location = loc
             aim(camera, (0, 0, 1.56))
             scene.render.filepath = str(out/(name+'.png'))

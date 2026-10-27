@@ -1,5 +1,5 @@
 {
-  "version": "v3-wing-supported",
+  "version": "v4-avian-body",
   "fps": 24,
   "phase_spacing": 12,
   "references": {
@@ -387,5 +387,21 @@
   "book_coordinates": "spine_base",
   "book_opens_toward": "uki",
   "book_rotation_locked": true,
-  "mechanics": "Whole-wing support, cover lift on reading stand; no object spinning, wrist twisting or page turning."
+  "mechanics": "Whole-wing support, cover lift on reading stand; no object spinning, wrist twisting or page turning.",
+  "body_model": "avian_pear",
+  "tail_feather_count": 7,
+  "eye_reference": [
+    0,
+    -0.507,
+    2.18
+  ],
+  "preserve_wings_from": "v3-wing-supported",
+  "wing_reference_signature": {
+    "geometry_sha256": "14337a2043a8bca41ab6757eeb01e158448e92fec538610ec1009b50f4179ccb",
+    "rig_sha256": "53484919781334194ebd5dee0d9bf4e555fec34d8c287a309d21c0919f2ca0cd",
+    "materials_sha256": "ee8afe83416422aa964a59c6ebd51fe7b1fbbb1c8aad21f11c8e583d7c119070",
+    "animation_sha256": "2836c97d47213dadf29c6746ea8f9e4e668b7cfc46b0a06e7064cdebc006ebc9",
+    "vertices": 5728,
+    "faces": 6180
+  }
 }

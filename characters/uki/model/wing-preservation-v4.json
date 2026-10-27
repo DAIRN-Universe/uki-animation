@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "reference": "v3-wing-supported",
+  "signature": {
+    "geometry_sha256": "14337a2043a8bca41ab6757eeb01e158448e92fec538610ec1009b50f4179ccb",
+    "rig_sha256": "53484919781334194ebd5dee0d9bf4e555fec34d8c287a309d21c0919f2ca0cd",
+    "materials_sha256": "ee8afe83416422aa964a59c6ebd51fe7b1fbbb1c8aad21f11c8e583d7c119070",
+    "animation_sha256": "2836c97d47213dadf29c6746ea8f9e4e668b7cfc46b0a06e7064cdebc006ebc9",
+    "vertices": 5728,
+    "faces": 6180
+  },
+  "poses_checked": 16,
+  "max_evaluated_vertex_delta": 0.0,
+  "scope": "Wing geometry, weights, materials, bind bones and evaluated animation retained."
+}

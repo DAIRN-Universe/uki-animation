@@ -1,9 +1,19 @@
-# Единая модель Үкі — v3, движение крыльями
+# Единая модель Үкі — v4, птичий силуэт
 
 Работа по [#17](https://github.com/DAIRN-Universe/uki-animation/issues/17),
 последовательность #13 → #12 → #16, одна ветка и [PR #18](https://github.com/DAIRN-Universe/uki-animation/pull/18).
 Модель — проверочный прототип; художественное утверждение и готовность EP01
-не заявляются. [Текущий отчёт](report-v3.md).
+не заявляются. [Текущий отчёт](report-v4.md).
+
+## Форма v4 и четыре ракурса
+
+Изменены голова, корпус, лапы и хвост. Крылья, их rig, материалы и анимация
+сохранены из v3; [сравнение](wing-preservation-v4.json) подтверждает нулевое
+смещение вершин. Хвост состоит из семи отдельных перьев.
+
+В текущем каталоге `four_view_comparison.png` показывает четыре принятых
+рисунка и соответствующие рендеры: анфас, ¾, профиль, сзади. Геометрия и
+оставшиеся отличия описаны в [отчёте v4](report-v4.md).
 
 ## Правила движения по уточнениям автора
 
@@ -21,18 +31,18 @@
 
 ## Смотреть локально
 
-Каталог `.local-assets/characters/uki/model/v3-wing-supported/`:
+Каталог `.local-assets/characters/uki/model/v4-avian-final/`:
 
-- `uki_character_v3.blend` — единая модель, rig, книга, опора и Actions.
+- `uki_character_v4.blend` — единая модель, rig, книга, опора и Actions.
 - `motion.mp4` — полный тест движения, 8 FPS, 640×480.
 - `front.png`, `three_quarter.png`, `profile.png`, `back.png`,
   `profile_head_front.png` — контрольные ракурсы.
 - `phase_01.png` … `phase_16.png` — опорные состояния.
 
-Каталог `.local-assets/characters/uki/model/v3-opening-study/`:
-`opening_side_closed.png`, `opening_side_opening.png`, `opening_side_open.png`
-и `opening_side.mp4`. Боковой ролик замедлен вдвое, чтобы проверить дугу
-обложки и движение всего крыла.
+`four_view_comparison.png` — общий лист сравнения четырёх ракурсов,
+рядом `four_view_comparison.json` с реальными хешами использованных PNG.
+Боковая проверка механики v3 остаётся исторической: она показывает прежнюю
+форму корпуса, а не текущий внешний вид.
 
 ## Воспроизведение
 
@@ -43,13 +53,18 @@ Blender **4.0.2**. Запуск из корня; выходные каталог
 .venv/bin/python -m pipeline.assets verify --character uki
 blender -b --factory-startup -t 4 --python-exit-code 1 \
   --python pipeline/blender/build_uki.py -- \
-  --output .local-assets/characters/uki/model/v3-wing-supported --articulated-fingers --render --animate
-blender -b .local-assets/characters/uki/model/v3-wing-supported/uki_character_v3.blend \
+  --output .local-assets/characters/uki/model/v4-avian-final --articulated-fingers --render --animate
+blender -b .local-assets/characters/uki/model/v4-avian-final/uki_character_v4.blend \
   -t 4 --python-exit-code 1 --python pipeline/blender/verify_uki.py -- \
-  --report output/uki-validation-v3.json
-blender -b .local-assets/characters/uki/model/v3-wing-supported/uki_character_v3.blend \
-  -t 4 --python-exit-code 1 --python pipeline/blender/render_opening_study.py -- \
-  --output .local-assets/characters/uki/model/v3-opening-study
+  --report output/uki-validation-v4.json
+python3 pipeline/blender/make_view_comparison.py \
+  --renders .local-assets/characters/uki/model/v4-avian-final \
+  --output .local-assets/characters/uki/model/v4-avian-final/four_view_comparison.png
+blender -b --factory-startup -t 4 --python-exit-code 1 \
+  --python pipeline/blender/verify_wing_preservation.py -- \
+  --baseline .local-assets/characters/uki/model/v3-wing-supported/uki_character_v3.blend \
+  --candidate .local-assets/characters/uki/model/v4-avian-final/uki_character_v4.blend \
+  --report output/uki-wing-preservation-v4.json
 ```
 
 Скрипт сверяет семь исходных SHA-256, не изменяет KRA/PNG, не перезаписывает
@@ -61,7 +76,8 @@ blender -b .local-assets/characters/uki/model/v3-wing-supported/uki_character_v3
 ## Rig и параметры
 
 `UkiMesh` — один постоянный mesh; `UkiRig` — 23 кости с двухчастными
-перьевыми группами, 17 без опции `--articulated-fingers`. `root`, `body`,
+перьевыми группами. V4 автоматически сохраняет этот вариант крыльев v3;
+флаг `--articulated-fingers` оставлен для совместимости. `root`, `body`,
 `head`, `foot.L/R` управляют корпусом, головой и лапами. `CTRL_wrist.L/R`
 задают только позиции концов крыльев для двухзвенной IK без stretch.
 `wrist` наследует движение предплечья, отдельного вращения запястьем нет.
@@ -88,7 +104,7 @@ blender -b .local-assets/characters/uki/model/v3-wing-supported/uki_character_v3
 [16-кадровый лист](https://drive.google.com/file/d/1ISWQTFLIAiw4RYTCgjxaeHJHxXBd9PPS/view)
 не изменены. Нумерация сохраняется; поздние указания автора меняют механику теста.
 
-| № / кадр | Действие v3 |
+| № / кадр | Действие v4 (сохранено из v3) |
 | --- | --- |
 | 01 / 1 | Книга на левой стопке, взгляд влево. |
 | 02 / 13 | Небольшое приседание и подведение левого крыла. |

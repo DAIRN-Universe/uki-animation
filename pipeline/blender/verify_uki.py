@@ -36,6 +36,19 @@ def verify():
     assert len(mesh.data.materials) >= 10
     assert all(v.groups and abs(sum(g.weight for g in v.groups)-1) < 1e-6 for v in mesh.data.vertices)
     assert all(math.isfinite(c) for v in mesh.data.vertices for c in v.co)
+    wing_preservation=None
+    tail_count=None
+    if cfg.get('body_model') == 'avian_pear':
+        sys.path.insert(0,str(Path(__file__).resolve().parent))
+        from verify_wing_preservation import wing_signature
+        wing_preservation,_=wing_signature(mesh,rig)
+        assert wing_preservation == cfg['wing_reference_signature'], 'Wings changed from v3'
+        ids=mesh.data.attributes.get('avian_tail_id')
+        assert ids is not None
+        tail_ids={item.value for item in ids.data if item.value > 0}
+        assert tail_ids == set(range(1,cfg['tail_feather_count']+1))
+        tail_count=len(tail_ids)
+
     bm = bmesh.new()
     bm.from_mesh(mesh.data)
     boundary = sum(not e.is_manifold for e in bm.edges)
@@ -109,7 +122,7 @@ def verify():
             if phase['n'] in (7,9,10):
                 head_matrix = (rig.matrix_world @ rig.pose.bones['head'].matrix
                                @ rig.data.bones['head'].matrix_local.inverted())
-                eyes = head_matrix @ Vector((0,-.6,2.25))
+                eyes = head_matrix @ Vector(cfg.get('eye_reference',(0,-.6,2.25)))
                 for sign,side in ((-1,'L'),(1,'R')):
                     hinge = bpy.data.objects['CoverHinge.'+side]
                     # Inner page surface is on +Y, opposite the decorated cover.
@@ -145,6 +158,8 @@ def verify():
             'max_book_step_per_frame': max_book_step,
             'non_manifold_edges': boundary, 'degenerate_faces': degenerate,
             'source_hashes_unchanged': True,
+            'tail_feather_count': tail_count,
+            'wing_preservation_signature': wing_preservation,
             'pages_face_uki_min_dot': min(reader_facing),
             'spine_drift_during_opening': spine_drift,
             'max_book_rotation_matrix_delta': max_book_rotation_delta,
