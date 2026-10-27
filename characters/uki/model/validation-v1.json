@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "blender": "4.0.2",
+  "frames_checked": 181,
+  "phases_checked": 16,
+  "finger_segments": 2,
+  "rigid_edges_checked": 38176,
+  "max_ik_error": 9.155176424217813e-05,
+  "max_mesh_edge_length_delta": 4.7368970272632094e-07,
+  "max_book_step_per_frame": 0.07655236414843439,
+  "non_manifold_edges": 0,
+  "degenerate_faces": 0,
+  "source_hashes_unchanged": true,
+  "limits": "Checks do not establish collision-free surfaces, artistic match, or production readiness."
+}

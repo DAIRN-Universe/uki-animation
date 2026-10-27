@@ -204,3 +204,19 @@ assets:
     verified_on: '2026-10-27'
     view_order: [front, three_quarter, profile, back]
     caption_height: 56
+  - id: uki.animation-reference.v1
+    source: google_drive
+    drive_file_id: 1ISWQTFLIAiw4RYTCgjxaeHJHxXBd9PPS
+    path: characters/uki/references/animation_v1/uki_book_interaction_16frames_v1.png
+    kind: animation_reference
+    purpose: Утверждённые 16 фаз взаимодействия Үкі с книгой, Issue 16
+    status: accepted_animation_reference
+    version: v1.0
+    sha256: 650013e9794c940d88d6129bb2fef3303235c7c8dc933f3593b051e3a3cdc445
+    size_bytes: 2207472
+    characters: [uki]
+    episodes: [ep01]
+    scenes: [sc00, sc01, sc04]
+    author: Андрей Свининых (утверждение); изображение создано в чате
+    original_name: uki_book_interaction_16frames_v1.png
+    license: Не назначена; права определяет автор

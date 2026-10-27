@@ -62,7 +62,9 @@ Markdown и [манифест](../assets/manifest.yaml). Перед работо
 Общие rig/Actions — `.local-assets/characters/<id>/{rigs,actions}/`.
 Указать версии Blender/rig, имена Actions, диапазоны и FPS. Link / Library
 Overrides и относительные ссылки на текстуры должны работать после sync.
-Общие файлы не копировать по сценам. Blender MCP и создание rig — отдельная работа.
+Общие файлы не копировать по сценам. По #17 подготовлен
+[проверочный rig единой модели Үкі](../characters/uki/model/README.md);
+он пока не является принятой производственной библиотекой.
 
 ## 5. Сцены и render
 

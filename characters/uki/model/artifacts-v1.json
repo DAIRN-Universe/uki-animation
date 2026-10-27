@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "status": "local_only_awaiting_drive_permission",
+  "built_from_commit": "d8dc550a69308896b3588545c73ead3ae2f20252",
+  "root": ".local-assets",
+  "note": "This is a local build receipt, not the Asset Sync manifest. No result Drive IDs exist yet.",
+  "artifacts": [
+    {
+      "path": "characters/uki/model/v1-review/audit.json",
+      "sha256": "70957d1345004a5d398836d4bd13803982108c09672cc053f934a85ad81f6285",
+      "size_bytes": 2854
+    },
+    {
+      "path": "characters/uki/model/v1-review/back.png",
+      "sha256": "6d206603e181c44df335e8ec37a989527002b32c4a60acc43463bd406e6a274e",
+      "size_bytes": 406375
+    },
+    {
+      "path": "characters/uki/model/v1-review/front.png",
+      "sha256": "e9ca2cf5430d78525dae3765df33cf8051875ae4766c4467e0b67e607c7dae89",
+      "size_bytes": 411419
+    },
+    {
+      "path": "characters/uki/model/v1-review/motion.mp4",
+      "sha256": "d888d6ee1341ae2ce2655f6baefcbf1111ed9dc6f6769f58a0ad007ff94ae2a7",
+      "size_bytes": 273024
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_01.png",
+      "sha256": "9bd66e83695b3788090f14528f2baa8b3a1b6502f54ec27a4384f7a35aba5bd7",
+      "size_bytes": 506596
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_02.png",
+      "sha256": "8aa8365d93a93adc5cf69bf1fa9896d0acc3b03a5cb2367be568050901570c58",
+      "size_bytes": 503256
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_03.png",
+      "sha256": "d99fa90ba5fa569e82f0ae7fdc9d519f78d152f073b130f344c919bc4f61d0fc",
+      "size_bytes": 491993
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_04.png",
+      "sha256": "f80c1ddc9ea4921c6851151e03a74857f2131cb5e72f237e62950cde136d1a64",
+      "size_bytes": 493647
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_05.png",
+      "sha256": "4f7d7fc7712188c08bc94247f32cf0a8b47100eb1bb797d5de3eb6d48c613646",
+      "size_bytes": 495361
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_06.png",
+      "sha256": "9e3491983354b0deb4d796c8e47dad34895c2be5db8ff7a01f19b6bbd2708187",
+      "size_bytes": 502240
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_07.png",
+      "sha256": "487c6f37f9387705172f80e5c2c6f1580fd24b069848268d19c0877aa062a181",
+      "size_bytes": 501143
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_08.png",
+      "sha256": "d118a7948fe3423d1679b806371e3a638da94e0456804bc9e1626afd8ed6ae52",
+      "size_bytes": 510110
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_09.png",
+      "sha256": "064da404370b7d68b8c5d8ec03730b3e2334b86c814c7d034e6350d498894333",
+      "size_bytes": 501143
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_10.png",
+      "sha256": "640cb56a53385cc7604f8caf008bc89dfec39960da40808ad141706f4b9c3c34",
+      "size_bytes": 501143
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_11.png",
+      "sha256": "7db84de70dc9a4d234a5359c940b1d69d0c61ab049a365525ab5e40e45b5fd1e",
+      "size_bytes": 495361
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_12.png",
+      "sha256": "7cc2285e931875ad112d53fb9bca154dd85bf60bbd2ef68bfc991472bf5775b6",
+      "size_bytes": 493782
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_13.png",
+      "sha256": "ad072ef70fffac10e3e7f553dcad4ebb52653e9ab256a91838949845a6e5cf09",
+      "size_bytes": 509111
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_14.png",
+      "sha256": "93452900a9c554dc24bcd32bf6209832e05647c289a34b0b9720829a5502234f",
+      "size_bytes": 506212
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_15.png",
+      "sha256": "40adaa1decd98347fa852c2ad0ffb919405185f63d9eba9ab3e50b6ddca43118",
+      "size_bytes": 505319
+    },
+    {
+      "path": "characters/uki/model/v1-review/phase_16.png",
+      "sha256": "673cdba0bf642c9f4e5cb872dadb978c3cc01bca93c3805cba875d9e208b4eff",
+      "size_bytes": 507190
+    },
+    {
+      "path": "characters/uki/model/v1-review/profile.png",
+      "sha256": "81c8c86dc7d52abf0f477762e5df63e217623e3892ced3016ec07c7b85639a82",
+      "size_bytes": 325301
+    },
+    {
+      "path": "characters/uki/model/v1-review/profile_head_front.png",
+      "sha256": "f65777a3a857b650cdb6dd911844fc2305886b45ee87034fb42b5ecfd09e2a61",
+      "size_bytes": 353340
+    },
+    {
+      "path": "characters/uki/model/v1-review/three_quarter.png",
+      "sha256": "a3c926ebc16f1c7ac52ff856bd6bf29dfe6a4ef35ea5f13726545fde533a41d2",
+      "size_bytes": 373931
+    },
+    {
+      "path": "characters/uki/model/v1-review/uki_character_v1.blend",
+      "sha256": "0c4222198ebe811edf83af89127f24dbb662e7324e3c28ef9b13c8dcd62f25e1",
+      "size_bytes": 5219528
+    },
+    {
+      "path": "characters/uki/model/v1-grip-study/finger-study.json",
+      "sha256": "62df0cd1c70ce5c699f082da8caccf9de45a2b382ccad55f6beec7e438733b57",
+      "size_bytes": 542
+    },
+    {
+      "path": "characters/uki/model/v1-grip-study/finger_curl.mp4",
+      "sha256": "5cc19434aec245546ada2be45e716fcadb94612593f924ddc9e8ba2118b1162d",
+      "size_bytes": 102072
+    },
+    {
+      "path": "characters/uki/model/v1-grip-study/fingers_curled.png",
+      "sha256": "d32d2251fb254c8715f16933a78c2404816ddd975afeab7147cdff4747275f6e",
+      "size_bytes": 670519
+    },
+    {
+      "path": "characters/uki/model/v1-grip-study/fingers_straight.png",
+      "sha256": "7b605bf7ffabde6cb0b3d0c9d187ae9d5aadf298b7de611817c3aad81d1064fb",
+      "size_bytes": 672989
+    }
+  ],
+  "videos": [
+    {
+      "path": "characters/uki/model/v1-review/motion.mp4",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 480,
+            "avg_frame_rate": "8/1",
+            "nb_frames": "61"
+          }
+        ],
+        "format": {
+          "duration": "7.625000"
+        }
+      }
+    },
+    {
+      "path": "characters/uki/model/v1-grip-study/finger_curl.mp4",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 480,
+            "avg_frame_rate": "24/1",
+            "nb_frames": "49"
+          }
+        ],
+        "format": {
+          "duration": "2.041667"
+        }
+      }
+    }
+  ]
+}

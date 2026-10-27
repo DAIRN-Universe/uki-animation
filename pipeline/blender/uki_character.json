@@ -1,0 +1,407 @@
+{
+  "version": "v4-avian-body",
+  "fps": 24,
+  "phase_spacing": 12,
+  "references": {
+    "characters/uki/poses/uki_five_views_brush_cleanup_v7.kra": "91e1ad07a4e980f903f4af432bdf157332be799b88f028c3597ba262db1c5340",
+    "characters/uki/references/views_v7/uki_front_v7.png": "4df6de21b9b547360a3182a5654e1b0a82d06f0ff36985c0772467d4d3dc1113",
+    "characters/uki/references/views_v7/uki_three_quarter_v7.png": "b10305df30942d3f2c0be64c6373327c6733edfcd1de55374762f96befae8cd6",
+    "characters/uki/references/views_v7/uki_profile_v7.png": "6139e91d061b705472b35c407e217543f7ea7d10073404bbae0ab6033fc82cd5",
+    "characters/uki/references/views_v7/uki_back_v7.png": "b770a521c13ee661b518456ae4f2cd89d3b62938ad10f6937105d6c2eea381ad",
+    "characters/uki/references/views_v7/uki_profile_head_front_v7.png": "6ab9133c4be5087e33016664aac8126a7edeae96b7bded90b93f9d188ebac82b",
+    "characters/uki/references/animation_v1/uki_book_interaction_16frames_v1.png": "650013e9794c940d88d6129bb2fef3303235c7c8dc933f3593b051e3a3cdc445"
+  },
+  "phases": [
+    {
+      "n": 1,
+      "label": "LOOK LEFT",
+      "book": [
+        -0.87,
+        0.08,
+        0.69
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        0,
+        0
+      ],
+      "spread": 0,
+      "head": -22,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
+    },
+    {
+      "n": 2,
+      "label": "REACH",
+      "book": [
+        -0.87,
+        0.08,
+        0.69
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        1,
+        0
+      ],
+      "spread": 0,
+      "head": -22,
+      "body_x": -0.25,
+      "body_yaw": -25,
+      "reading_pitch": 90,
+      "head_pitch": 8,
+      "body_z": -0.22
+    },
+    {
+      "n": 3,
+      "label": "GRAB BOOK",
+      "book": [
+        -0.45,
+        -0.18,
+        0.94
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        1,
+        0
+      ],
+      "spread": 0,
+      "head": -16,
+      "body_x": -0.25,
+      "body_yaw": -20,
+      "reading_pitch": 90,
+      "head_pitch": 8,
+      "body_z": -0.1
+    },
+    {
+      "n": 4,
+      "label": "LIFT BOOK",
+      "book": [
+        0.05,
+        -0.32,
+        1.02
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        1,
+        1
+      ],
+      "spread": 0,
+      "head": -10,
+      "body_x": -0.05,
+      "body_yaw": -10,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
+    },
+    {
+      "n": 5,
+      "label": "BRING TO CENTER",
+      "book": [
+        0.23,
+        -0.35,
+        0.95
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        1,
+        1
+      ],
+      "spread": 0,
+      "head": 0,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
+    },
+    {
+      "n": 6,
+      "label": "UNFOLD WRIST",
+      "book": [
+        0.23,
+        -0.35,
+        0.95
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0.65,
+      "grip": [
+        1,
+        1
+      ],
+      "spread": 0,
+      "head": 0,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 15,
+      "body_z": 0
+    },
+    {
+      "n": 7,
+      "label": "OPEN BOOK",
+      "book": [
+        0.23,
+        -0.35,
+        0.95
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 1,
+      "grip": [
+        1,
+        1
+      ],
+      "spread": 0,
+      "head": 0,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 30,
+      "body_z": 0
+    },
+    {
+      "n": 8,
+      "label": "SPREAD WINGS",
+      "book": [
+        0.23,
+        -0.35,
+        0.95
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 1,
+      "grip": [
+        0,
+        0
+      ],
+      "spread": 1,
+      "head": 0,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 15,
+      "body_z": 0
+    },
+    {
+      "n": 9,
+      "label": "READ",
+      "book": [
+        0.23,
+        -0.35,
+        0.95
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 1,
+      "grip": [
+        0,
+        0
+      ],
+      "spread": 0,
+      "head": 0,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 35,
+      "body_z": 0
+    },
+    {
+      "n": 10,
+      "label": "TURN PAGE",
+      "book": [
+        0.23,
+        -0.35,
+        0.95
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 1,
+      "grip": [
+        0,
+        0
+      ],
+      "spread": 0,
+      "head": 0,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 35,
+      "body_z": 0
+    },
+    {
+      "n": 11,
+      "label": "CLOSE BOOK",
+      "book": [
+        0.23,
+        -0.35,
+        0.95
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        1,
+        1
+      ],
+      "spread": 0,
+      "head": 0,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 15,
+      "body_z": 0
+    },
+    {
+      "n": 12,
+      "label": "MOVE RIGHT",
+      "book": [
+        0.8,
+        -0.18,
+        0.94
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        1,
+        1
+      ],
+      "spread": 0,
+      "head": 18,
+      "body_x": 0.25,
+      "body_yaw": 20,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": -0.08
+    },
+    {
+      "n": 13,
+      "label": "PLACE ON RIGHT",
+      "book": [
+        1.38,
+        0.08,
+        0.69
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        0,
+        1
+      ],
+      "spread": 0,
+      "head": 22,
+      "body_x": 0.26,
+      "body_yaw": 15,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
+    },
+    {
+      "n": 14,
+      "label": "FOLD WINGS",
+      "book": [
+        1.38,
+        0.08,
+        0.69
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        0,
+        0
+      ],
+      "spread": 0,
+      "head": 18,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
+    },
+    {
+      "n": 15,
+      "label": "CHECK RIGHT",
+      "book": [
+        1.38,
+        0.08,
+        0.69
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        0,
+        0
+      ],
+      "spread": 0,
+      "head": 22,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
+    },
+    {
+      "n": 16,
+      "label": "DONE",
+      "book": [
+        1.38,
+        0.08,
+        0.69
+      ],
+      "tilt": 0,
+      "yaw": 90,
+      "open": 0,
+      "grip": [
+        0,
+        0
+      ],
+      "spread": 0,
+      "head": 0,
+      "body_x": 0,
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
+    }
+  ],
+  "finger_segments": 2,
+  "page_turn_enabled": false,
+  "scope_note": "Author: two passive feather segments; contact hidden by feathers. No object spinning, finger dexterity, wrist twisting or page turning.",
+  "book_coordinates": "spine_base",
+  "book_opens_toward": "uki",
+  "book_rotation_locked": true,
+  "mechanics": "Whole-wing support, cover lift on reading stand; no object spinning, wrist twisting or page turning.",
+  "body_model": "avian_pear",
+  "tail_feather_count": 7,
+  "eye_reference": [
+    0,
+    -0.507,
+    2.18
+  ],
+  "preserve_wings_from": "v3-wing-supported",
+  "wing_reference_signature": {
+    "geometry_sha256": "14337a2043a8bca41ab6757eeb01e158448e92fec538610ec1009b50f4179ccb",
+    "rig_sha256": "53484919781334194ebd5dee0d9bf4e555fec34d8c287a309d21c0919f2ca0cd",
+    "materials_sha256": "ee8afe83416422aa964a59c6ebd51fe7b1fbbb1c8aad21f11c8e583d7c119070",
+    "animation_sha256": "2836c97d47213dadf29c6746ea8f9e4e668b7cfc46b0a06e7064cdebc006ebc9",
+    "vertices": 5728,
+    "faces": 6180
+  }
+}

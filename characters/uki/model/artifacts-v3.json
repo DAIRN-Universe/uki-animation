@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "version": "v3-wing-supported",
+  "status": "local_only_awaiting_drive_permission",
+  "root": ".local-assets",
+  "supersedes": "artifacts-v1.json",
+  "source_sha256": {
+    "pipeline/blender/build_uki.py": "1556a51c12e61ececae72758d155e3d1fa18f10329dfbff1cfe49ab27db56a21",
+    "pipeline/blender/uki_character.json": "4c12677d5ac0505797d6666b8c8ccedba7ed3cc49f8d0b8495cb9aa1846874ec",
+    "pipeline/blender/verify_uki.py": "7f1def234baab74a692aaa2e6450be81ddc0cc716d8b215faa246ac14b654570",
+    "pipeline/blender/render_motion.py": "a60fad2ee2a0a06ddb105c92c9c8f2d593c50026705a5922e956d691c218ab25",
+    "pipeline/blender/render_opening_study.py": "c4d58bd111a61ccb4ff4f6d215c397b078a6938b951701c08ddb052c1fb90402"
+  },
+  "note": "Local build receipt, not the Asset Sync manifest; no result Drive IDs exist yet.",
+  "artifacts": [
+    {
+      "path": "characters/uki/model/v3-wing-supported/audit.json",
+      "sha256": "6ea3746c3c2abb59b867ca94217f05888e92df681ba049f92398b20e6e3ef35e",
+      "size_bytes": 2754
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/back.png",
+      "sha256": "02a5cab1207ea9878ae8df54432c37419ff1e30326f7797632c6eac7d897715c",
+      "size_bytes": 406403
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/front.png",
+      "sha256": "5ad6e3f8ce0f941c8b0510bfc32804268a9eaf6936f8bcf1d4d30376769c570d",
+      "size_bytes": 411428
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/motion.mp4",
+      "sha256": "255336d609e6f4759c728e7eed06387e491a36d59020172f2514cd909331bd3d",
+      "size_bytes": 276091
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_01.png",
+      "sha256": "01bb0d44732ca8470f596b0717b7eddab110debbd9f794fe5b985165aa5d8bbc",
+      "size_bytes": 511385
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_02.png",
+      "sha256": "c2805bf5e1339b82b4278a18140a550781bb2701ea2e8609db24ed448aac685d",
+      "size_bytes": 504481
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_03.png",
+      "sha256": "5d0fecd4dd8309c2023b3ceccf33149344a063ed5d61621c70dae1247ae08472",
+      "size_bytes": 507544
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_04.png",
+      "sha256": "70c69b397e8c9ac178821bddffe78f34506ceb050595fe499fd26cb1e42269d0",
+      "size_bytes": 509233
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_05.png",
+      "sha256": "517cb089fe43907d3ad19d4dd03666172ea13e6d424a69206d84f2de33dd0fd2",
+      "size_bytes": 506915
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_06.png",
+      "sha256": "a27452296691f78e4a94c61e3a08dedd27de960220452058d8ce92f95c09e465",
+      "size_bytes": 506898
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_07.png",
+      "sha256": "92d59e36f6d3cf8e28e9fffec87ca1b89a66fdc453712c977ce2483315bf6a4a",
+      "size_bytes": 499688
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_08.png",
+      "sha256": "3e6775a01c033b21fde696c3fca8e902726614c888e6b326735bcd5a43f950a3",
+      "size_bytes": 513083
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_09.png",
+      "sha256": "9527b9a59bcf7d6df815f1253fd7406152aac153a7d5d79d267aa65a38e91df5",
+      "size_bytes": 500200
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_10.png",
+      "sha256": "62c2d0843028613ea5e27f56a5d065865ab45aa758ba902958ff97f8b52e79a1",
+      "size_bytes": 500200
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_11.png",
+      "sha256": "cf1f8356e37b6ec2d5dff7876747f19788e977035dd0105a70ac41f4ae920e63",
+      "size_bytes": 504246
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_12.png",
+      "sha256": "b01b67f5e40d0836acbb74bab2e2d66dd8511cb36f387a16523108ebc2fd9801",
+      "size_bytes": 502337
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_13.png",
+      "sha256": "30552183d092f44823179b0940b67dd948fdb731147f910022af7b681bd0ffa9",
+      "size_bytes": 513710
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_14.png",
+      "sha256": "c97b5de83d3ab008cfb7f20f2d4184398a2e38700f575251c1120359bafef4e8",
+      "size_bytes": 511520
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_15.png",
+      "sha256": "9d3535a0d786446942d50682512b907d2daff3e0b45ea2033bb0e7bc94e16223",
+      "size_bytes": 510768
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/phase_16.png",
+      "sha256": "30c97dc7fc25de609e10c335edc53eedc55e8daa46fe26d27b659c47359d8620",
+      "size_bytes": 512282
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/profile.png",
+      "sha256": "a9a84b2c9d7c497c56f6542ac598c8ebe0b11660be7cff83954569a852ca35f8",
+      "size_bytes": 325308
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/profile_head_front.png",
+      "sha256": "d54e163bfda14571b90f6b42186d0369bc47cb64f061d05fac4de1629ccb642a",
+      "size_bytes": 353341
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/three_quarter.png",
+      "sha256": "21c789169a038eff883c0e1384324f73439ab2229b4bf70265bce52be1b048c1",
+      "size_bytes": 373983
+    },
+    {
+      "path": "characters/uki/model/v3-wing-supported/uki_character_v3.blend",
+      "sha256": "e7aeb7244cd5b6371aef1a32c93d8f081a1f9574216e1460fb42d0a33f77d4f0",
+      "size_bytes": 5164556
+    },
+    {
+      "path": "characters/uki/model/v3-opening-study/opening_side.mp4",
+      "sha256": "841af1f87f62caa361e198110321b2de6679e8ce9d5adfa20d57a04dedad7775",
+      "size_bytes": 79734
+    },
+    {
+      "path": "characters/uki/model/v3-opening-study/opening_side_closed.png",
+      "sha256": "3eae90ae1399d913db6696c805170d2842206f873b0a8f9c37f240d8ad686b49",
+      "size_bytes": 493455
+    },
+    {
+      "path": "characters/uki/model/v3-opening-study/opening_side_open.png",
+      "sha256": "765332f3df84336c9fd8faee856fb2d2c72f6963a0a7371ec144dc42b279a54e",
+      "size_bytes": 498245
+    },
+    {
+      "path": "characters/uki/model/v3-opening-study/opening_side_opening.png",
+      "sha256": "61ec1328def968c75f1d26a49ee61d9ab89bc029ff7c47b242f0d907c923d748",
+      "size_bytes": 499499
+    }
+  ],
+  "videos": [
+    {
+      "path": "characters/uki/model/v3-wing-supported/motion.mp4",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 480,
+            "avg_frame_rate": "8/1",
+            "nb_frames": "61"
+          }
+        ],
+        "format": {
+          "duration": "7.625000"
+        }
+      }
+    },
+    {
+      "path": "characters/uki/model/v3-opening-study/opening_side.mp4",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 480,
+            "avg_frame_rate": "12/1",
+            "nb_frames": "25"
+          }
+        ],
+        "format": {
+          "duration": "2.083333"
+        }
+      }
+    }
+  ]
+}
