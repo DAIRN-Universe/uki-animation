@@ -1,0 +1,47 @@
+# IntelliJ IDEA: local project settings
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Python bytecode, environments and tool caches
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+
+# Blender numbered backup files and simulation caches
+*.blend[0-9]*
+blendcache_*/
+
+# Krita backup/autosave files; intentional .kra, .blend and PNG stay visible
+*.kra~
+*.kra.[0-9]*~
+*.kra-autosave*
+*.png~
+.autosave*
+
+# Editor/OS temporary files
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Generated local results; retain only the empty-directory marker
+/output/*
+!/output/.gitkeep
