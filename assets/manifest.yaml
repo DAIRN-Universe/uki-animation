@@ -1,0 +1,55 @@
+schema_version: 1
+assets:
+  - id: uki.poses.v7
+    source: google_drive
+    drive_file_id: 1EbEm0vIvBfbIc6hYuS11yBsC5vgNK7Z8
+    path: characters/uki/poses/uki_five_views_brush_cleanup_v7.kra
+    kind: krita_source
+    purpose: Пять принятых статичных референсов общей пластики Үкі
+    status: accepted_static
+    version: v7
+    sha256: 91e1ad07a4e980f903f4af432bdf157332be799b88f028c3597ba262db1c5340
+    size_bytes: 3270260
+    characters: [uki]
+    episodes: [ep01]
+    scenes: []
+    author: Андрей Свининых
+    original_name: uki_five_views_brush_cleanup_v7.kra
+    drive_modified_time: '2026-10-27T12:35:43.197Z'
+    verified_on: '2026-10-27'
+    verification: CRC ZIP, XML, пять групп и все пять проекций проверены в Krita 6.0.4.1; RGBA/U8 440x560; оригинал не изменён
+    license: Не назначена; права на художественные материалы определяет автор
+  - id: krita.brush.bristles-5-flat
+    source: google_drive
+    drive_file_id: 18BD-Wv1-CfK-YjTL8fatv9QSYbMBKda1
+    path: tools/krita/brushes/krita-bristles-5-flat.zip
+    kind: krita_brush_archive
+    purpose: Разрешённая кисть f) Bristles-5 Flat и необходимые наконечники
+    status: verified_archive
+    version: '2026-10-27-flat'
+    sha256: 0ac89f2b02de4e2264de70d5f7c7dfcb9bc5c64f0f324d1bef584898c8aea9a3
+    size_bytes: 42059
+    characters: [uki]
+    episodes: [ep01]
+    scenes: []
+    original_name: krita-bristles-5-flat.zip
+    drive_modified_time: '2026-10-27T14:32:41.760Z'
+    verified_on: '2026-10-27'
+    provenance: resources/provenance.json и resources/source_bundle_meta.xml внутри ZIP
+  - id: krita.brush.dry-bristles
+    source: google_drive
+    drive_file_id: 1M3oKl3_K-eObqgzQa6opuAla2q_R1QVe
+    path: tools/krita/brushes/krita-brush-g-dry-bristles.zip
+    kind: krita_brush_archive
+    purpose: Разрешённая кисть g) Dry Bristles и необходимые наконечники; без пресета Flat
+    status: verified_archive
+    version: '2026-10-27-dry-corrected'
+    sha256: d8a32da0d9b26f44d03cfc176bfff900436950a104ebf8ca5df4ddb4c235e703
+    size_bytes: 396833
+    characters: [uki]
+    episodes: [ep01]
+    scenes: []
+    original_name: krita-brush-g-dry-bristles.zip
+    drive_modified_time: '2026-10-27T14:35:33.698Z'
+    verified_on: '2026-10-27'
+    provenance: resources/provenance.json и resources/source_bundle_meta.xml внутри ZIP
