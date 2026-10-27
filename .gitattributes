@@ -1,0 +1,2 @@
+# Preserve the author's Markdown hard line breaks in the verbatim source.
+episodes/ep01/storyboard/uki_kirpi_storyboard_v1.md whitespace=-blank-at-eol
