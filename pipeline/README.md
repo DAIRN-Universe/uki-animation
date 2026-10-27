@@ -5,6 +5,7 @@
 | Каталог | Назначение |
 | --- | --- |
 | `assets/` | Загрузка и проверка ресурсов Drive; [схема и команды](../assets/README.md) |
+| `krita/export_reference_views.py` | Экспорт пяти групп v7 и общего листа внутри Krita 6; [инструкция](../characters/uki/references/poses/views-v7.md) |
 | `krita/install_brushes.py` | Проверка/установка двух разрешённых кистей |
 | `blender/` | Место будущих инструментов библиотек ресурсов, Actions и сцен |
 | `render/` | Место будущих инструментов рендера |

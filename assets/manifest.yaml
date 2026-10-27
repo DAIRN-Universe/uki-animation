@@ -53,3 +53,154 @@ assets:
     drive_modified_time: '2026-10-27T14:35:33.698Z'
     verified_on: '2026-10-27'
     provenance: resources/provenance.json и resources/source_bundle_meta.xml внутри ZIP
+  - id: uki.references.v7.front
+    source: google_drive
+    drive_file_id: 1dWfgiV0qW_c3peQ4LYQfQIhHOFwOgcno
+    path: characters/uki/references/views_v7/uki_front_v7.png
+    kind: reference_view
+    purpose: 'Референс Үкі для Image-to-3D #12: 01 — Анфас'
+    status: verified_export
+    version: v7-export-1
+    sha256: 4df6de21b9b547360a3182a5654e1b0a82d06f0ff36985c0772467d4d3dc1113
+    size_bytes: 277331
+    characters: [uki]
+    episodes: [ep01]
+    scenes: []
+    author: Андрей Свининых
+    original_name: uki_front_v7.png
+    derived_from: uki.poses.v7
+    source_sha256: 91e1ad07a4e980f903f4af432bdf157332be799b88f028c3597ba262db1c5340
+    role: primary
+    width: 440
+    height: 560
+    color_profile: sRGB-elle-V2-srgbtrc.icc
+    exported_with: Krita 6.0.4.1 (git bd6e8d0)
+    verified_on: '2026-10-27'
+    source_group: 01 — Анфас
+    alpha_bbox: [62, 23, 379, 550]
+  - id: uki.references.v7.three-quarter
+    source: google_drive
+    drive_file_id: 1XBYbGmBDbfA4GYurAo8bEM44EfGdz2Dk
+    path: characters/uki/references/views_v7/uki_three_quarter_v7.png
+    kind: reference_view
+    purpose: 'Референс Үкі для Image-to-3D #12: 02 — Три четверти'
+    status: verified_export
+    version: v7-export-1
+    sha256: b10305df30942d3f2c0be64c6373327c6733edfcd1de55374762f96befae8cd6
+    size_bytes: 265757
+    characters: [uki]
+    episodes: [ep01]
+    scenes: []
+    author: Андрей Свининых
+    original_name: uki_three_quarter_v7.png
+    derived_from: uki.poses.v7
+    source_sha256: 91e1ad07a4e980f903f4af432bdf157332be799b88f028c3597ba262db1c5340
+    role: primary
+    width: 440
+    height: 560
+    color_profile: sRGB-elle-V2-srgbtrc.icc
+    exported_with: Krita 6.0.4.1 (git bd6e8d0)
+    verified_on: '2026-10-27'
+    source_group: 02 — Три четверти
+    alpha_bbox: [66, 23, 373, 549]
+  - id: uki.references.v7.profile
+    source: google_drive
+    drive_file_id: 1IhTZFctvqbhcY4IaOLqef3MATrh3_ORW
+    path: characters/uki/references/views_v7/uki_profile_v7.png
+    kind: reference_view
+    purpose: 'Референс Үкі для Image-to-3D #12: 03 — Профиль'
+    status: verified_export
+    version: v7-export-1
+    sha256: 6139e91d061b705472b35c407e217543f7ea7d10073404bbae0ab6033fc82cd5
+    size_bytes: 230068
+    characters: [uki]
+    episodes: [ep01]
+    scenes: []
+    author: Андрей Свининых
+    original_name: uki_profile_v7.png
+    derived_from: uki.poses.v7
+    source_sha256: 91e1ad07a4e980f903f4af432bdf157332be799b88f028c3597ba262db1c5340
+    role: primary
+    width: 440
+    height: 560
+    color_profile: sRGB-elle-V2-srgbtrc.icc
+    exported_with: Krita 6.0.4.1 (git bd6e8d0)
+    verified_on: '2026-10-27'
+    source_group: 03 — Профиль
+    alpha_bbox: [62, 17, 378, 549]
+  - id: uki.references.v7.back
+    source: google_drive
+    drive_file_id: 127CWZOu9p6yxjezSViGu77wHmimtAo8e
+    path: characters/uki/references/views_v7/uki_back_v7.png
+    kind: reference_view
+    purpose: 'Референс Үкі для Image-to-3D #12: 04 — Сзади'
+    status: verified_export
+    version: v7-export-1
+    sha256: b770a521c13ee661b518456ae4f2cd89d3b62938ad10f6937105d6c2eea381ad
+    size_bytes: 260918
+    characters: [uki]
+    episodes: [ep01]
+    scenes: []
+    author: Андрей Свининых
+    original_name: uki_back_v7.png
+    derived_from: uki.poses.v7
+    source_sha256: 91e1ad07a4e980f903f4af432bdf157332be799b88f028c3597ba262db1c5340
+    role: primary
+    width: 440
+    height: 560
+    color_profile: sRGB-elle-V2-srgbtrc.icc
+    exported_with: Krita 6.0.4.1 (git bd6e8d0)
+    verified_on: '2026-10-27'
+    source_group: 04 — Сзади
+    alpha_bbox: [70, 20, 371, 544]
+  - id: uki.references.v7.profile-head-front
+    source: google_drive
+    drive_file_id: 14xRl4KDdZj_HUciOmc7q23a6pBa55lPd
+    path: characters/uki/references/views_v7/uki_profile_head_front_v7.png
+    kind: reference_view
+    purpose: 'Референс Үкі для Image-to-3D #12: 05 — Тело в профиль · голова к зрителю
+      на 90°'
+    status: verified_export
+    version: v7-export-1
+    sha256: 6ab9133c4be5087e33016664aac8126a7edeae96b7bded90b93f9d188ebac82b
+    size_bytes: 264376
+    characters: [uki]
+    episodes: [ep01]
+    scenes: []
+    author: Андрей Свининых
+    original_name: uki_profile_head_front_v7.png
+    derived_from: uki.poses.v7
+    source_sha256: 91e1ad07a4e980f903f4af432bdf157332be799b88f028c3597ba262db1c5340
+    role: additional
+    width: 440
+    height: 560
+    color_profile: sRGB-elle-V2-srgbtrc.icc
+    exported_with: Krita 6.0.4.1 (git bd6e8d0)
+    verified_on: '2026-10-27'
+    source_group: 05 — Тело в профиль · голова к зрителю на 90°
+    alpha_bbox: [62, 19, 417, 549]
+  - id: uki.references.v7.sheet
+    source: google_drive
+    drive_file_id: 1h90MtSa8F-gAdu_2ofzEpUHB8IYwOI6F
+    path: characters/uki/references/views_v7/uki_reference_sheet_v7.png
+    kind: reference_sheet
+    purpose: 'Лист четырёх ракурсов Үкі для Image-to-3D #12'
+    status: verified_export
+    version: v7-export-1
+    sha256: 2fc2afe9f5b2f92c9d7b9e6a52be8c490fdbea2d53ba3edd00309e934f5ed6cb
+    size_bytes: 1017724
+    characters: [uki]
+    episodes: [ep01]
+    scenes: []
+    author: Андрей Свининых
+    original_name: uki_reference_sheet_v7.png
+    derived_from: uki.poses.v7
+    source_sha256: 91e1ad07a4e980f903f4af432bdf157332be799b88f028c3597ba262db1c5340
+    role: reference_sheet
+    width: 1760
+    height: 616
+    color_profile: sRGB-elle-V2-srgbtrc.icc
+    exported_with: Krita 6.0.4.1 (git bd6e8d0)
+    verified_on: '2026-10-27'
+    view_order: [front, three_quarter, profile, back]
+    caption_height: 56
