@@ -26,7 +26,7 @@ htmlcov/
 *.blend[0-9]*
 blendcache_*/
 
-# Krita backup/autosave files; intentional .kra, .blend and PNG stay visible
+# Krita backup/autosave files
 *.kra~
 *.kra.[0-9]*~
 *.kra-autosave*
@@ -45,3 +45,43 @@ Thumbs.db
 # Generated local results; retain only the empty-directory marker
 /output/*
 !/output/.gitkeep
+
+# Drive is the only binary asset store (no Git LFS).
+/.local-assets/
+/.secrets/
+.env
+.env.*
+*credentials*.json
+*token*.json
+client_secret*.json
+*secret*.json
+service-account*.json
+*.pem
+*.key
+*.[kK][rR][aA]
+*.[pP][nN][gG]
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[pP][sS][dD]
+*.ora
+*.webp
+*.gif
+*.tif
+*.tiff
+*.blend
+*.blend[0-9]*
+*.glb
+*.gltf
+*.fbx
+*.obj
+*.mp4
+*.mov
+*.webm
+*.wav
+*.mp3
+*.ogg
+*.zip
+*.bundle
+*.kpp
+*.gbr
+*.gih
