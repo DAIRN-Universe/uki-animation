@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "blender": "4.0.2",
+  "frames_checked": 181,
+  "phases_checked": 16,
+  "finger_segments": 2,
+  "rigid_edges_checked": 38176,
+  "max_ik_error": 9.935870808821135e-05,
+  "max_mesh_edge_length_delta": 6.780122802779731e-07,
+  "max_book_step_per_frame": 0.08458551546622015,
+  "non_manifold_edges": 0,
+  "degenerate_faces": 0,
+  "source_hashes_unchanged": true,
+  "pages_face_uki_min_dot": 0.8140411579658391,
+  "spine_drift_during_opening": 0.0,
+  "max_book_rotation_matrix_delta": 0.0,
+  "independent_wrist_twist": false,
+  "max_inherited_wrist_step_degrees": 32.09017532463336,
+  "coupled_feather_groups": true,
+  "cover_opening_degrees": [
+    0.0,
+    179.99999817876716
+  ],
+  "limits": "Checks do not establish collision-free surfaces, artistic match, or production readiness."
+}

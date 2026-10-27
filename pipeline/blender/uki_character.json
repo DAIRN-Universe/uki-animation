@@ -1,5 +1,5 @@
 {
-  "version": "v1-prototype",
+  "version": "v3-wing-supported",
   "fps": 24,
   "phase_spacing": 12,
   "references": {
@@ -16,11 +16,11 @@
       "n": 1,
       "label": "LOOK LEFT",
       "book": [
-        -1.1,
-        -0.45,
-        0.67
+        -0.87,
+        0.08,
+        0.69
       ],
-      "tilt": 90,
+      "tilt": 0,
       "yaw": 90,
       "open": 0,
       "grip": [
@@ -30,17 +30,20 @@
       "spread": 0,
       "head": -22,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
     },
     {
       "n": 2,
       "label": "REACH",
       "book": [
-        -1.1,
-        -0.45,
-        0.67
+        -0.87,
+        0.08,
+        0.69
       ],
-      "tilt": 90,
+      "tilt": 0,
       "yaw": 90,
       "open": 0,
       "grip": [
@@ -50,38 +53,44 @@
       "spread": 0,
       "head": -22,
       "body_x": -0.25,
-      "body_yaw": -25
+      "body_yaw": -25,
+      "reading_pitch": 90,
+      "head_pitch": 8,
+      "body_z": -0.22
     },
     {
       "n": 3,
       "label": "GRAB BOOK",
       "book": [
-        -0.75,
-        -0.5,
-        0.82
+        -0.45,
+        -0.18,
+        0.94
       ],
-      "tilt": 45,
-      "yaw": 75,
+      "tilt": 0,
+      "yaw": 90,
       "open": 0,
       "grip": [
         1,
-        1
+        0
       ],
       "spread": 0,
       "head": -16,
       "body_x": -0.25,
-      "body_yaw": -50
+      "body_yaw": -20,
+      "reading_pitch": 90,
+      "head_pitch": 8,
+      "body_z": -0.1
     },
     {
       "n": 4,
       "label": "LIFT BOOK",
       "book": [
-        -0.5,
-        -0.6,
-        0.88
+        0.05,
+        -0.32,
+        1.02
       ],
-      "tilt": 15,
-      "yaw": 75,
+      "tilt": 0,
+      "yaw": 90,
       "open": 0,
       "grip": [
         1,
@@ -89,16 +98,19 @@
       ],
       "spread": 0,
       "head": -10,
-      "body_x": -0.15,
-      "body_yaw": -25
+      "body_x": -0.05,
+      "body_yaw": -10,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
     },
     {
       "n": 5,
       "label": "BRING TO CENTER",
       "book": [
-        0,
-        -0.5,
-        0.72
+        0.23,
+        -0.35,
+        0.95
       ],
       "tilt": 0,
       "yaw": 90,
@@ -110,18 +122,21 @@
       "spread": 0,
       "head": 0,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
     },
     {
       "n": 6,
       "label": "UNFOLD WRIST",
       "book": [
-        0,
-        -0.5,
-        0.72
+        0.23,
+        -0.35,
+        0.95
       ],
       "tilt": 0,
-      "yaw": 30,
+      "yaw": 90,
       "open": 0.65,
       "grip": [
         1,
@@ -130,18 +145,21 @@
       "spread": 0,
       "head": 0,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 15,
+      "body_z": 0
     },
     {
       "n": 7,
       "label": "OPEN BOOK",
       "book": [
-        0,
-        -0.5,
-        0.72
+        0.23,
+        -0.35,
+        0.95
       ],
       "tilt": 0,
-      "yaw": 0,
+      "yaw": 90,
       "open": 1,
       "grip": [
         1,
@@ -150,18 +168,21 @@
       "spread": 0,
       "head": 0,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 30,
+      "body_z": 0
     },
     {
       "n": 8,
       "label": "SPREAD WINGS",
       "book": [
-        0,
-        -0.84,
-        0.43
+        0.23,
+        -0.35,
+        0.95
       ],
-      "tilt": 65,
-      "yaw": 0,
+      "tilt": 0,
+      "yaw": 90,
       "open": 1,
       "grip": [
         0,
@@ -170,55 +191,64 @@
       "spread": 1,
       "head": 0,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 15,
+      "body_z": 0
     },
     {
       "n": 9,
       "label": "READ",
       "book": [
-        0,
-        -0.5,
-        0.72
+        0.23,
+        -0.35,
+        0.95
       ],
       "tilt": 0,
-      "yaw": 0,
+      "yaw": 90,
       "open": 1,
       "grip": [
-        1,
-        1
+        0,
+        0
       ],
       "spread": 0,
       "head": 0,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 35,
+      "body_z": 0
     },
     {
       "n": 10,
       "label": "TURN PAGE",
       "book": [
-        0,
-        -0.5,
-        0.72
+        0.23,
+        -0.35,
+        0.95
       ],
       "tilt": 0,
-      "yaw": 0,
+      "yaw": 90,
       "open": 1,
       "grip": [
-        1,
-        1
+        0,
+        0
       ],
       "spread": 0,
       "head": 0,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 35,
+      "body_z": 0
     },
     {
       "n": 11,
       "label": "CLOSE BOOK",
       "book": [
-        0,
-        -0.5,
-        0.72
+        0.23,
+        -0.35,
+        0.95
       ],
       "tilt": 0,
       "yaw": 90,
@@ -230,17 +260,20 @@
       "spread": 0,
       "head": 0,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 15,
+      "body_z": 0
     },
     {
       "n": 12,
       "label": "MOVE RIGHT",
       "book": [
-        0.6,
-        -0.55,
-        0.86
+        0.8,
+        -0.18,
+        0.94
       ],
-      "tilt": 35,
+      "tilt": 0,
       "yaw": 90,
       "open": 0,
       "grip": [
@@ -250,17 +283,20 @@
       "spread": 0,
       "head": 18,
       "body_x": 0.25,
-      "body_yaw": 40
+      "body_yaw": 20,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": -0.08
     },
     {
       "n": 13,
       "label": "PLACE ON RIGHT",
       "book": [
-        1.15,
-        -0.45,
-        0.67
+        1.38,
+        0.08,
+        0.69
       ],
-      "tilt": 90,
+      "tilt": 0,
       "yaw": 90,
       "open": 0,
       "grip": [
@@ -269,18 +305,21 @@
       ],
       "spread": 0,
       "head": 22,
-      "body_x": 0.2,
-      "body_yaw": 15
+      "body_x": 0.26,
+      "body_yaw": 15,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
     },
     {
       "n": 14,
       "label": "FOLD WINGS",
       "book": [
-        1.15,
-        -0.45,
-        0.67
+        1.38,
+        0.08,
+        0.69
       ],
-      "tilt": 90,
+      "tilt": 0,
       "yaw": 90,
       "open": 0,
       "grip": [
@@ -290,17 +329,20 @@
       "spread": 0,
       "head": 18,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
     },
     {
       "n": 15,
       "label": "CHECK RIGHT",
       "book": [
-        1.15,
-        -0.45,
-        0.67
+        1.38,
+        0.08,
+        0.69
       ],
-      "tilt": 90,
+      "tilt": 0,
       "yaw": 90,
       "open": 0,
       "grip": [
@@ -310,17 +352,20 @@
       "spread": 0,
       "head": 22,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
     },
     {
       "n": 16,
       "label": "DONE",
       "book": [
-        1.15,
-        -0.45,
-        0.67
+        1.38,
+        0.08,
+        0.69
       ],
-      "tilt": 90,
+      "tilt": 0,
       "yaw": 90,
       "open": 0,
       "grip": [
@@ -330,10 +375,17 @@
       "spread": 0,
       "head": 0,
       "body_x": 0,
-      "body_yaw": 0
+      "body_yaw": 0,
+      "reading_pitch": 90,
+      "head_pitch": 0,
+      "body_z": 0
     }
   ],
   "finger_segments": 2,
   "page_turn_enabled": false,
-  "scope_note": "Author clarification: two-part feather fingers for clamping book; no page-turn test."
+  "scope_note": "Author: two passive feather segments; contact hidden by feathers. No object spinning, finger dexterity, wrist twisting or page turning.",
+  "book_coordinates": "spine_base",
+  "book_opens_toward": "uki",
+  "book_rotation_locked": true,
+  "mechanics": "Whole-wing support, cover lift on reading stand; no object spinning, wrist twisting or page turning."
 }

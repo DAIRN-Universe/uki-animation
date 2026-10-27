@@ -333,17 +333,17 @@ def finger_skin(rig, names):
 def book():
     root = empty('BookRoot')
     hinges, anchors = {}, {}
-    cube('Spine', (0, 0, .36), (.065, .09, .76), 'leather', root)
+    cube('Spine', (0, 0, .36), (.075, .09, .76), 'leather', root)
     for sign, side in ((-1, 'L'), (1, 'R')):
-        h = empty('CoverHinge.'+side, root)
+        h = empty('CoverHinge.'+side, root, (sign*.025, 0, 0))
         hinges[side] = h
         cube('Cover.'+side, (sign*.235, 0, .36), (.47, .045, .76), 'leather', h)
         cube('Gold border.'+side, (sign*.235, -.028, .36), (.40, .012, .68), 'gold', h)
         cube('Leather panel.'+side, (sign*.235, -.037, .36), (.36, .012, .64), 'leather', h)
         for j in range(6):
-            cube('Page block.'+side+str(j), (sign*.235, -.055-j*.009, .36), (.43, .008, .69), 'paper', h)
+            cube('Page block.'+side+str(j), (sign*.235, .012+j*.003, .36), (.43, .008, .69), 'paper', h)
         # Mid-edge contact markers are explicit, inspectable book children.
-        anchors[side] = empty('Grip.'+side, h, (sign*.45, -.11, .35))
+        anchors[side] = empty('Grip.'+side, h, (sign*.45, -.06, .35))
     page_hinge = empty('PageHinge', root)
     # Author clarification: static pages only; no page-turn mechanism.
     return root, hinges, anchors, page_hinge
@@ -393,9 +393,7 @@ def setup_ik(rig):
         targets[side] = target
         ik = rig.pose.bones['forearm.'+side].constraints.new('IK')
         ik.name, ik.target, ik.chain_count, ik.use_stretch = 'Wing reach', target, 2, False
-        rot = rig.pose.bones['wrist.'+side].constraints.new('COPY_ROTATION')
-        rot.target = target
-        rot.target_space = rot.owner_space = 'WORLD'
+        # Wrist inherits the wing chain; no independent object-twisting controller.
         for name in ('upper.', 'forearm.'):
             rig.pose.bones[name+side].ik_stretch = 0
     if ARTICULATED:
@@ -434,24 +432,32 @@ def animate(rig, root, hinges, anchors, page, targets):
         a, b = phases[i:i+2]
         def val(key):
             av, bv = a[key], b[key]
+            if a['n'] == 10 and key == 'grip':
+                # Return whole wings to the open covers before closing starts.
+                reach = min(1, t/.35)
+                return [reach,reach]
+            if a['n'] == 10 and key == 'open':
+                close = max(0,(t-.35)/.65)
+                return 1-close*close*(3-2*close)
             if isinstance(av, list):
                 return [x+(y-x)*t for x, y in zip(av, bv)]
             return av+(bv-av)*t
         scene.frame_set(frame)
-        # Config specifies the centre of a closed book rather than its spine.
-        # Euler XYZ evaluates Rz @ Ry @ Rx.
-        rotation = Matrix.Rotation(math.radians(val('yaw')), 4, 'Z') @ Matrix.Rotation(math.radians(val('tilt')), 4, 'Y')
-        offset = rotation.to_3x3() @ Vector((0, -.23*(1-val('open')), 0))
-        set_key(root, 'location', Vector(val('book'))-offset, frame)
-        set_key(rig.pose.bones['body'], 'location', (val('body_x'), 0, 0), frame)
+        # Book coordinates describe the spine base. Opening never recentres it.
+        rotation = (Matrix.Rotation(math.radians(val('reading_pitch')), 4, 'X')
+                    @ Matrix.Rotation(math.radians(val('yaw')), 4, 'Z')
+                    @ Matrix.Rotation(math.radians(val('tilt')), 4, 'Y'))
+        set_key(root, 'location', val('book'), frame)
+        set_key(rig.pose.bones['body'], 'location', (val('body_x'), val('body_z'), 0), frame)
         set_key(rig.pose.bones['body'], 'rotation_euler', (0, math.radians(val('body_yaw')), 0), frame)
-        set_key(root, 'rotation_euler', (0, math.radians(val('tilt')), math.radians(val('yaw'))), frame)
-        for sign, side in ((-1, 'L'), (1, 'R')):
-            angle = -sign*math.radians(88-68*val('open'))
+        set_key(root, 'rotation_euler', rotation.to_euler('XYZ', root.rotation_euler), frame)
+        # Rear cover stays near its held pose; the front cover swings around the spine.
+        for side, closed, travel in (('L', -88, 0), ('R', 88, -180)):
+            angle = math.radians(closed + travel*val('open'))
             set_key(hinges[side], 'rotation_euler', (0, 0, angle), frame)
         # Reference phase 10 is retained as a numbered hold; page turn excluded by author.
         head = rig.pose.bones['head']
-        set_key(head, 'rotation_euler', (0, math.radians(-val('head')), 0), frame)
+        set_key(head, 'rotation_euler', (math.radians(val('head_pitch')), math.radians(-val('head')), 0), frame)
         bpy.context.view_layer.update()
         for j, (sign, side) in enumerate(((-1, 'L'), (1, 'R'))):
             grip = val('grip')[j]
@@ -461,16 +467,13 @@ def animate(rig, root, hinges, anchors, page, targets):
             target = targets[side]
             position = neutral.lerp(contact, grip)
             set_key(target, 'location', position, frame)
-            # Keep folded wrist at rest; spread rotates the feather fan outward.
-            rotation = rig.data.bones['wrist.'+side].matrix_local.to_euler()
-            rotation.z += sign*(val('open')*.32*grip+val('spread')*1.2)
-            set_key(target, 'rotation_euler', rotation, frame)
+            # Object rotation is not driven by feather fingers or an independent wrist.
             for k in range(3):
                 fan = rig.pose.bones[f'feathers{k+1}.{side}']
-                set_key(fan, 'rotation_euler', (grip*(.30 if ARTICULATED else .16), 0, sign*(k-1)*(.13*grip+.24*val('spread'))), frame)
+                set_key(fan, 'rotation_euler', (grip*.15, 0, sign*(k-1)*(.13*grip+.24*val('spread'))), frame)
                 if ARTICULATED:
                     digit = rig.pose.bones[f'feathers{k+1}_tip.{side}']
-                    set_key(digit,'rotation_euler',(1.05*grip,0,0),frame)
+                    set_key(digit,'rotation_euler',(.55*grip,0,0),frame)
     # Avoid Bezier overshoot in baked transforms and contact locations.
     for action in bpy.data.actions:
         for fc in action.fcurves:
@@ -533,8 +536,11 @@ def main():
     parser.add_argument('--animate', action='store_true')
     parser.add_argument('--articulated-fingers', action='store_true')
     args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+    if CFG.get('book_rotation_locked') and len({(p['yaw'],p['tilt'],p['reading_pitch']) for p in CFG['phases']}) != 1:
+        raise RuntimeError('Book orientation must remain constant; use wing motion to open the cover')
     ARTICULATED = args.articulated_fingers
     out = args.output.resolve()
+    blend_name = 'uki_character_' + CFG['version'].split('-')[0] + '.blend'
     if out.exists():
         raise RuntimeError('Output exists; choose a new version directory')
     if not (out.is_relative_to(REPO/'.local-assets') or out.is_relative_to(REPO/'output')):
@@ -559,7 +565,10 @@ def main():
     for x in (-1.1, 1.15):
         for j in range(3):
             cube('Stack proxy', (x, -.3, .12+j*.21), (.85, .65, .20), 'leather')
-    cube('Reading support', (0, -.88, .2), (1.12, .7, .40), 'leather')
+    cube('Reading support', (.23, -.73, .85), (1.18, .82, .10), 'leather')
+    for x in (-.23,.69):
+        for y in (-1.03,-.43):
+            cube('Reading stand leg', (x,y,.42), (.065,.065,.84), 'leather')
     camera = scene_setup()
     targets = setup_ik(rig)
     animate(rig, root, hinges, anchors, page, targets)
@@ -585,9 +594,14 @@ def main():
             img.filepath = bpy.path.relpath(str(REPO/'.local-assets'/name), start=str(out))
     scene['finger_segments'] = 2 if ARTICULATED else 1
     scene['page_turn_enabled'] = False
+    scene['book_opens_toward'] = 'uki'
+    scene['book_opening_revision'] = 3
+    scene['independent_wrist_twist'] = False
+    scene['book_rotation_locked'] = True
+    scene['book_support'] = 'reading_stand'
     scene['prototype_status'] = 'Needs author review; see audit.json and repository report'
     scene['source_issue'] = 'DAIRN-Universe/uki-animation#17'
-    bpy.ops.wm.save_as_mainfile(filepath=str(out/'uki_character_v1.blend'))
+    bpy.ops.wm.save_as_mainfile(filepath=str(out/blend_name))
     if args.render:
         # Hide staging/book for four consistent character-only controls.
         staging = [o for o in scene.objects if o.type == 'MESH' and o != mesh and o.name != 'Stage']
@@ -615,7 +629,7 @@ def main():
             scene.render.filepath = str(out/(name+'.png'))
             bpy.ops.render.render(write_still=True)
         # Reload saved model so controls and staging are restored exactly.
-        bpy.ops.wm.open_mainfile(filepath=str(out/'uki_character_v1.blend'))
+        bpy.ops.wm.open_mainfile(filepath=str(out/blend_name))
         scene = bpy.context.scene
         camera = scene.camera
         camera.location = (1.8, -8, 3.2)
